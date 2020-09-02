@@ -1,0 +1,11 @@
+app:
+  persistenceUnit: "HelidonATPJTA"
+#  department: "My Shop"
+
+# The error generation rate is used in the Kuberetes labs
+#errorgenerationrate: "0.5"
+  
+#tracing:
+#  service: "stockmanager"
+#  host: "zipkin"
+ 
