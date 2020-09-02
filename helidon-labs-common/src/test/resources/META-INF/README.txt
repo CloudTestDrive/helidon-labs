@@ -1,1 +1,0 @@
- the resources folder for the test invocation of the program

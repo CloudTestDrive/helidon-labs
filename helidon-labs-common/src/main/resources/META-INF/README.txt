@@ -1,1 +1,0 @@
- the resources folder for the main invocation of the program
