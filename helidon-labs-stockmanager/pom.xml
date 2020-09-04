@@ -171,7 +171,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.10</version>
+			<version>1.18.12</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- SLF4J is a logging facade that let's us change the actual logger used 
