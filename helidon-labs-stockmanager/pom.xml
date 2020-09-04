@@ -74,11 +74,12 @@
 			<groupId>io.helidon.integrations.cdi</groupId>
 			<artifactId>helidon-integrations-cdi-hibernate</artifactId>
 		</dependency>
-		<!-- Hibernate is the actuall JPA driver that sits on the JDBC drivers -->
+		<!-- Hibernate is a DB generic JPA layer, this is the Helidon connection 
+			the integration brings in the appropriate hibernate version for the integration, 
+			so we don;t need to -->
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>5.4.9.Final</version>
+			<groupId>io.helidon.integrations.cdi</groupId>
+			<artifactId>helidon-integrations-cdi-hibernate</artifactId>
 		</dependency>
 		<!-- EclipseLink is also a generic JPA layer, that sids on the drivers, 
 			to use this you's also need the EclipseLink dependencies as well, this is 
