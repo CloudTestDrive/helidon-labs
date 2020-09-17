@@ -17,17 +17,25 @@ package com.oracle.labs.helidon.common.data;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
+import io.helidon.common.Reflected;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Reflected // this tells the Helidon native-image support to include this as a class that
+			// can be accessed via reflection
+@Data // Tells Lombok to create getters and setters, equals and hashcode
+@NoArgsConstructor // Tells Lombok to create a constructor with no args (needed for the JSCON
+					// unmarshalling process to work)
+@AllArgsConstructor // Tells Lombok to create a constructor with all the args (makes life easier
+					// creating instances)
+//Tells Helidon the details of this object for the OpenAPI delf documenting class
 @Schema(name = "ItemDetails", description = "Details of the item in the database", example = "{\"itemCount\": 10, \"itemName\": \"Pencil\"}")
 public class ItemDetails {
+	// Tells helidon OpenAPI support what the field is
 	@Schema(required = true, description = "The name of the item", example = "Pencil")
 	private String itemName;
+	// Tells helidon OpenAPI support what the field is
 	@Schema(required = true, description = "The number of items listed as being available", example = "10")
 	private int itemCount;
 }
