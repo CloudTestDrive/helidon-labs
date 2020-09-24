@@ -1,5 +1,5 @@
 app:
-  persistenceUnit: "HelidonATPJTA"
+  persistenceUnit: "stockmanagerJTA"
 #  department: "My Shop"
 
 # The error generation rate is used in the Kuberetes labs
