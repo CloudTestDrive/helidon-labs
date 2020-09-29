@@ -74,12 +74,11 @@ public class LivenessChecker implements HealthCheck {
 			return HealthCheckResponse.named("storefront-live").up()
 					.withData("uptime", System.currentTimeMillis() - startTime).withData("storename", storeName)
 					.withData("frozen", true).build();
-		} else {
-			log.info("Not frozen, Returning alive status true, storename " + storeName);
-			return HealthCheckResponse.named("storefront-live").up()
-					.withData("uptime", System.currentTimeMillis() - startTime).withData("storename", storeName)
-					.withData("frozen", false).build();
 		}
+		log.info("Not frozen, Returning alive status true, storename " + storeName);
+		return HealthCheckResponse.named("storefront-live").up()
+				.withData("uptime", System.currentTimeMillis() - startTime).withData("storename", storeName)
+				.withData("frozen", false).build();
 	}
 
 }

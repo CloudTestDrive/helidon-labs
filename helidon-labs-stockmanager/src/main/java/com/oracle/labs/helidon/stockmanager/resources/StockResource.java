@@ -29,9 +29,7 @@ import javax.json.JsonObject;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.transaction.Transactional;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -39,9 +37,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response.Status;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.metrics.annotation.ConcurrentGauge;
@@ -193,15 +189,9 @@ public class StockResource {
 	 */
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	// Create a counter that reports on how often this has been called
-	@Counted(name = "stockReporting")
 	// Only allow access to authenticated users
 	@Authenticated
-	// if this fails call the fallback handler to convert the exception to something
-	// REST like
-	// this class has a handle method that returns a single ItemDetails
-	// @Fallback(StockManagerCollectionItemDetailsFallbackHandler.class)
-	public Collection<ItemDetails> getAllStockLevels() {
+	public Collection<ItemDetails> listAllStock() {
 		log.info("Getting all stock items");
 		// get the data from the database
 		// build the query
@@ -387,7 +377,5 @@ public class StockResource {
 	private ItemDetails createItemDetails(StockLevel stockLevel) {
 		return new ItemDetails(stockLevel.getStockId().getItemName(), stockLevel.getItemCount());
 	}
-
-	
 
 }
