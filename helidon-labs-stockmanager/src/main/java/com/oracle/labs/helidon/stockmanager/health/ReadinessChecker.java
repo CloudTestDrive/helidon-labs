@@ -40,7 +40,7 @@ import com.oracle.labs.helidon.stockmanager.providers.DepartmentProvider;
 @ApplicationScoped
 @Readiness
 public class ReadinessChecker implements HealthCheck {
-	@PersistenceContext(unitName = "HelidonATPJTA")
+	@PersistenceContext(unitName = "stockmanagerJTA")
 	private EntityManager entityManager;
 	private DepartmentProvider departmentProvider;
 	private String persistenceUnit;
