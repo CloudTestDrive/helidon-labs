@@ -19,6 +19,9 @@
 	</parent>
 	<properties>
 		<mainClass>com.oracle.labs.helidon.storefront.Main</mainClass>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+		<version.lombok>1.18.12</version.lombok>
 	</properties>
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>storefront</artifactId>
@@ -50,7 +53,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.12</version>
+			<version>${version.lombok}</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- SLF4J is a logging facade that let's us change the actual logger used 

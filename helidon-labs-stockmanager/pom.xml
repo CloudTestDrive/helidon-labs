@@ -22,6 +22,9 @@
 		<libs.classpath.prefix>libs</libs.classpath.prefix>
 		<copied.libs.dir>${project.build.directory}/${libs.classpath.prefix}</copied.libs.dir>
 		<ojdbcversion>19.7.0.0</ojdbcversion>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+		<version.lombok>1.18.12</version.lombok>
 	</properties>
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>stockmanager</artifactId>
@@ -172,7 +175,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.12</version>
+			<version>${version.lombok}</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- SLF4J is a logging facade that let's us change the actual logger used 
