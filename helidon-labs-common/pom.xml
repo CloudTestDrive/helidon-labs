@@ -5,7 +5,7 @@
 
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>helidon-labs-common</artifactId>
-	<version>2.0.2.0</version>
+	<version>2.1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>helidon-labs-common</name>
@@ -13,10 +13,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<helidon.version>2.0.2</helidon.version>
+		<helidon.version>2.1.0</helidon.version>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-		<version.lombok>1.18.12</version.lombok>
+		<version.lombok>1.18.16</version.lombok>
 	</properties>
 
 	<build>
