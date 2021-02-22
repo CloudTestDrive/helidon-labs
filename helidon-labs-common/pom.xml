@@ -5,7 +5,7 @@
 
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>helidon-labs-common</artifactId>
-	<version>2.1.0.0</version>
+	<version>2.2.1.0</version>
 	<packaging>jar</packaging>
 
 	<name>helidon-labs-common</name>
