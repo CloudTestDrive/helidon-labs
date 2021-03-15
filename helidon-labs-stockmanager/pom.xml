@@ -126,6 +126,7 @@
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ucp</artifactId>
+			<version>${ojdbcversion}</version>
 			<scope>runtime</scope>
 		</dependency>
 		<!-- For Oracle Wallet, get the oraclepki, osdt_core and osdt_cert artifacts -->
