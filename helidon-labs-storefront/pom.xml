@@ -21,7 +21,7 @@
 		<mainClass>com.oracle.labs.helidon.storefront.Main</mainClass>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-		<version.lombok>1.18.18</version.lombok>
+		<version.lombok>1.18.20</version.lombok>
 	</properties>
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>storefront</artifactId>
