@@ -29,12 +29,6 @@
 	<name>${project.artifactId}</name>
 
 	<dependencies>
-	<!-- 
-		<dependency>
-			<groupId>com.oracle.labs.helidon</groupId>
-			<artifactId>helidon-labs-common</artifactId>
-			<version>${project.version}</version>
-		</dependency>-->
 		<dependency>
 			<groupId>io.helidon.microprofile.bundles</groupId>
 			<artifactId>helidon-microprofile</artifactId>
