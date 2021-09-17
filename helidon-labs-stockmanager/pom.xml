@@ -15,7 +15,7 @@
 	<parent>
 		<groupId>io.helidon.applications</groupId>
 		<artifactId>helidon-mp</artifactId>
-		<version>2.3.0</version>
+		<version>2.3.2</version>
 	</parent>
 	<properties>
 		<mainClass>com.oracle.labs.helidon.stockmanager.Main</mainClass>
@@ -28,7 +28,7 @@
 	</properties>
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>stockmanager</artifactId>
-	<version>2.3.0.0</version>
+	<version>${parent.version}</version>
 	<name>${project.artifactId}</name>
 
 	<dependencies>
@@ -191,13 +191,6 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-jdk14</artifactId>
-		</dependency>
-
-		<!-- Common stuff shared between the stock manager and storefront projects -->
-		<dependency>
-			<groupId>com.oracle.labs.helidon</groupId>
-			<artifactId>helidon-labs-common</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 		<!-- tracing calls -->
 		<!-- <dependency> <groupId>io.helidon.tracing</groupId> <artifactId>helidon-tracing-zipkin</artifactId> 

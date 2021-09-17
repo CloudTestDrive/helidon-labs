@@ -36,10 +36,10 @@ import javax.ws.rs.core.Response.Status;
 import org.eclipse.microprofile.faulttolerance.ExecutionContext;
 import org.eclipse.microprofile.faulttolerance.FallbackHandler;
 
-import com.oracle.labs.helidon.common.data.ItemDetails;
-import com.oracle.labs.helidon.common.exceptions.commonapi.UnknownItemException;
+import com.oracle.labs.helidon.storefront.data.ItemDetails;
 import com.oracle.labs.helidon.storefront.exceptions.MinimumChangeException;
 import com.oracle.labs.helidon.storefront.exceptions.NotEnoughItemsException;
+import com.oracle.labs.helidon.storefront.exceptions.UnknownItemException;
 
 import lombok.extern.slf4j.Slf4j;
 

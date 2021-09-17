@@ -27,7 +27,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import com.oracle.labs.helidon.common.data.ItemDetails;
+import com.oracle.labs.helidon.storefront.data.ItemDetails;
 
 // Specify a config key here, this makes it easier in the configuration as we can just use that rather than having 
 // to define things using a fully qualified class name
