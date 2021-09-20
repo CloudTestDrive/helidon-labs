@@ -20,7 +20,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.oracle.labs.helidon.common.data.ItemDetails;
+import com.oracle.labs.helidon.storefront.data.ItemDetails;
 import com.oracle.labs.helidon.storefront.restclients.StockManager;
 
 public class StockManagerDummy implements StockManager {

@@ -32,11 +32,11 @@ import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 
-import com.oracle.labs.helidon.common.data.ItemDetails;
-import com.oracle.labs.helidon.common.exceptions.commonapi.UnknownItemException;
+import com.oracle.labs.helidon.storefront.data.ItemDetails;
 import com.oracle.labs.helidon.storefront.data.ItemRequest;
 import com.oracle.labs.helidon.storefront.exceptions.MinimumChangeException;
 import com.oracle.labs.helidon.storefront.exceptions.NotEnoughItemsException;
+import com.oracle.labs.helidon.storefront.exceptions.UnknownItemException;
 
 /**
  * This is provided as an example interface for the StorefrontResource if you

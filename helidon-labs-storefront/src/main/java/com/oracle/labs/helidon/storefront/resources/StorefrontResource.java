@@ -46,13 +46,13 @@ import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-import com.oracle.labs.helidon.common.data.ItemDetails;
-import com.oracle.labs.helidon.common.exceptions.commonapi.UnknownItemException;
+import com.oracle.labs.helidon.storefront.data.ItemDetails;
 import com.oracle.labs.helidon.storefront.data.ItemRequest;
 import com.oracle.labs.helidon.storefront.data.MinimumChange;
 import com.oracle.labs.helidon.storefront.dummy.StockManagerDummy;
 import com.oracle.labs.helidon.storefront.exceptions.MinimumChangeException;
 import com.oracle.labs.helidon.storefront.exceptions.NotEnoughItemsException;
+import com.oracle.labs.helidon.storefront.exceptions.UnknownItemException;
 import com.oracle.labs.helidon.storefront.resources.fallback.StorefrontFallbackHandler;
 import com.oracle.labs.helidon.storefront.restclients.StockManager;
 
