@@ -15,7 +15,7 @@
 	<parent>
 		<groupId>io.helidon.applications</groupId>
 		<artifactId>helidon-mp</artifactId>
-		<version>2.3.2</version>
+		<version>2.3.4</version>
 	</parent>
 	<properties>
 		<mainClass>com.oracle.labs.helidon.stockmanager.Main</mainClass>
@@ -24,11 +24,11 @@
 		<ojdbcversion>21.1.0.0</ojdbcversion>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-		<version.lombok>1.18.20</version.lombok>
+		<version.lombok>1.18.22</version.lombok>
 	</properties>
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>stockmanager</artifactId>
-	<version>${parent.version}</version>
+	<version>${project.parent.version}</version>
 	<name>${project.artifactId}</name>
 
 	<dependencies>
@@ -227,7 +227,7 @@
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
-				<version>2.5.2</version>
+				<version>3.1.4</version>
 				<configuration>
 					<!-- Use the Graal community edition image as it's got better JIT compiler, 
 						it uses a bigger base than the distroless java jib uses by defautso we can 
