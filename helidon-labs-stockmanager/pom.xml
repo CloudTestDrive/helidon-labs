@@ -126,28 +126,28 @@
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ucp</artifactId>
-			<version>${ojdbcversion}</version>
+			<!-- <version>${ojdbcversion}</version>-->
 			<scope>runtime</scope>
 		</dependency>
 		<!-- For Oracle Wallet, get the oraclepki, osdt_core and osdt_cert artifacts -->
 		<dependency>
 			<groupId>com.oracle.database.security</groupId>
 			<artifactId>oraclepki</artifactId>
-			<version>${ojdbcversion}</version>
+			<!-- <version>${ojdbcversion}</version>-->
 			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.oracle.database.security</groupId>
 			<artifactId>osdt_core</artifactId>
-			<version>${ojdbcversion}</version>
+			<!-- <version>${ojdbcversion}</version>-->
 			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.oracle.database.security</groupId>
 			<artifactId>osdt_cert</artifactId>
-			<version>${ojdbcversion}</version>
+			<!-- <version>${ojdbcversion}</version>-->
 			<scope>runtime</scope>
 		</dependency>
 
@@ -157,13 +157,13 @@
 		<dependency>
 			<groupId>com.oracle.database.ha</groupId>
 			<artifactId>ons</artifactId>
-			<version>${ojdbcversion}</version>
+			<!-- <version>${ojdbcversion}</version>-->
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.oracle.database.security</groupId>
 			<artifactId>oraclepki</artifactId>
-			<version>${ojdbcversion}</version>
+			<!-- <version>${ojdbcversion}</version>-->
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -241,7 +241,7 @@
 						<!-- <image>openjdk:11-jre-alpine</image> -->
 						<!-- <image>openjdk:11-jre-slim</image> -->
 						<!-- <image>openjdk:11</image> -->
-						<image>ghcr.io/graalvm/graalvm-ce:ol7-java11-21.0.0.2</image>
+						<image>ghcr.io/graalvm/graalvm-ce:java11-21.3.0</image>
 					</from>
 					<to>
 						<image>jib-${project.artifactId}</image>
