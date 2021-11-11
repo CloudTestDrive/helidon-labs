@@ -1,5 +1,5 @@
 # helidon-labs
-This project holds the code for the start of labs position of the Clodu Test Drive Helidon lab.
+This project holds the code for the start of labs position of the Cloud Test Drive Helidon lab.
 
 The code here is intended to be imported into Eclipse, then follow the instructions in the cloud test drive to develop it.
 
