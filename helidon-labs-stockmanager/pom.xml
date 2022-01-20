@@ -1,34 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (c) 2018, 2020 Oracle and/or its affiliates. Licensed under 
-	the Apache License, Version 2.0 (the "License"); you may not use this file 
-	except in compliance with the License. You may obtain a copy of the License 
-	at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable 
-	law or agreed to in writing, software distributed under the License is distributed 
-	on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
-	express or implied. See the License for the specific language governing permissions 
-	and limitations under the License. -->
+<!-- Copyright (c) 2021 Oracle and/or its affiliates.
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+The Universal Permissive License (UPL), Version 1.0
+
+Subject to the condition set forth below, permission is hereby granted to any
+person obtaining a copy of this software, associated documentation and/or data
+(collectively the "Software"), free of charge and under any and all copyright
+rights in the Software, and any and all patent rights owned or freely
+licensable by each licensor hereunder covering either (i) the unmodified
+Software as contributed to or provided by such licensor, or (ii) the Larger
+Works (as defined below), to deal in both
+
+(a) the Software, and
+(b) any piece of software and/or hardware listed in the lrgrwrks.txt file if
+one is included with the Software (each a "Larger Work" to which the Software
+is contributed by such licensors),
+
+without restriction, including without limitation the rights to copy, create
+derivative works of, display, perform, and distribute the Software and make,
+use, sell, offer for sale, import, export, have made, and have sold the
+Software and the Larger Work(s), and to sublicense the foregoing rights on
+either these or other terms.
+
+This license is subject to the following condition:
+The above copyright notice and either this complete permission notice or at
+a minimum a reference to the UPL must be included in all copies or
+substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>io.helidon.applications</groupId>
 		<artifactId>helidon-mp</artifactId>
-		<version>2.3.4</version>
+		<version>2.4.1</version>
 	</parent>
 	<properties>
 		<mainClass>com.oracle.labs.helidon.stockmanager.Main</mainClass>
 		<libs.classpath.prefix>libs</libs.classpath.prefix>
 		<copied.libs.dir>${project.build.directory}/${libs.classpath.prefix}</copied.libs.dir>
-		<ojdbcversion>21.1.0.0</ojdbcversion>
-		<maven.compiler.source>11</maven.compiler.source>
+		<ojdbcversion>21.4.0.0.1</ojdbcversion>
+		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
 		<version.lombok>1.18.22</version.lombok>
 	</properties>
 	<groupId>com.oracle.labs.helidon</groupId>
 	<artifactId>stockmanager</artifactId>
-	<version>${project.parent.version}</version>
+	<version>2.4.1</version>
 	<name>${project.artifactId}</name>
 
 	<dependencies>
@@ -171,6 +196,22 @@
 			<artifactId>helidon-integrations-cdi-hibernate</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>javax.transaction-api</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- not quite sure why it fails to run withouh this entry, given this package is imported elsewhere, 
+          but it seems to fail if this isn't present on my system at least -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
 		<!-- Utilities -->
 		<!-- Lombok does the auto method creation -->
 		<dependency>
@@ -192,6 +233,8 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-jdk14</artifactId>
 		</dependency>
+
+
 		<!-- tracing calls -->
 		<!-- <dependency> <groupId>io.helidon.tracing</groupId> <artifactId>helidon-tracing-zipkin</artifactId> 
 			</dependency> -->
@@ -240,8 +283,8 @@
 					<from>
 						<!-- <image>openjdk:11-jre-alpine</image> -->
 						<!-- <image>openjdk:11-jre-slim</image> -->
-						<!-- <image>openjdk:11</image> -->
-						<image>ghcr.io/graalvm/graalvm-ce:java11-21.3.0</image>
+						<image>ghcr.io/graalvm/graalvm-ce:java17-21</image>
+						<!--<image>openjdk:17.0.1-jdk</image>-->
 					</from>
 					<to>
 						<image>jib-${project.artifactId}</image>
